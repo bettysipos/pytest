@@ -11,15 +11,6 @@ from selenium.webdriver.support.select import Select
 from selenium.webdriver.common.action_chains import ActionChains
 import random
 
-
-def check_exists_by_xpath(xpath):
-    try:
-        driver.find_element(By.XPATH, xpath)
-    except NoSuchElementException:
-        return False
-    return True
-
-
 '''driver létrehozása'''
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
 URL = "http://selenium.oktwebs.training360.com/7904_potzarovizsga/rock_paper_scissors.html"
