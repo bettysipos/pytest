@@ -30,7 +30,7 @@ def test_01():
     time.sleep(2)
     felirat = driver.find_element(By.XPATH, "//h1[text()='Slide Down Toggle']")
 
-    assert check_exists_by_xpath("//h1[normalize-space()='Slide Down Toggle']")
+    assert check_exists_by_xpath("//h1[text()='Slide Down Toggle']")
 
     open_button = driver.find_element(By.XPATH, "//label[@for='toggle']")
 
@@ -48,12 +48,12 @@ def test_02():
     print(hidden_message.text)
     assert check_exists_by_xpath("/html/body/div[2]/h1")
 
-    close_button = driver.find_element(By.XPATH, "/html/body/label")
+    close_button = driver.find_element(By.XPATH, "//label[@for='toggle']")
     close_button.click()
 
     felirat = driver.find_element(By.XPATH, "//h1[text()='Slide Down Toggle']")
 
-    assert check_exists_by_xpath("//h1[normalize-space()='Slide Down Toggle']")
+    assert check_exists_by_xpath("//h1[text()='Slide Down Toggle']")
 
     open_button = driver.find_element(By.XPATH, "//label[@for='toggle']")
 
